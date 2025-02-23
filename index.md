@@ -4,9 +4,9 @@
 <p align="center">Charlie Gillet: cgillet@ucsd.edu</p>
 <p align="center">Mentor: Mikio Aoi maoi@ucsd.edu</p>
 
-<a href="https://github.com/courtneyacheung/Hierarchical-Latent-Variable-Models-for-Neural-Data-Analysis/blob/main/papers/DSC_Capstone_Q2_Report.pdf"> Written Report</a>
+<a href="https://github.com/Charlie-279/LVM-Neural-Data-Analysis"> Written Report (still need to replace this with actual link to paper)</a>
 <br>
-<a href="https://github.com/courtneyacheung/Hierarchical-Latent-Variable-Models-for-Neural-Data-Analysis">Github Code Repository </a>
+<a href="https://github.com/Charlie-279/LVM-Neural-Data-Analysis">Github Code Repository </a>
 <br>
 
 ## Introduction
