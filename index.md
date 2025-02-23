@@ -10,7 +10,7 @@
 <br>
 
 ## Introduction
-As methods for recording neural data advance rapidly in both volume and speed \citep{buccino2022spike}, neurophysiologists face increasing challenges in developing innovative techniques to assess and sort incoming spike signals (neuron firing rates) and inferring relationships between neural activities across different brain regions. We seek to create and utilize a method for extracting shared and independent latent features that accurately represent interpretable neural population dynamics across distinct brain regions.
+As methods for recording neural data advance rapidly in both volume and speed, neurophysiologists face increasing challenges in developing innovative techniques to assess and sort incoming spike signals (neuron firing rates) and inferring relationships between neural activities across different brain regions. We seek to create and utilize a method for extracting shared and independent latent features that accurately represent interpretable neural population dynamics across distinct brain regions.
 
 The model we wish to construct builds on four main core components that serve as the foundation, allowing it to operate as we desire it to. These four components are: the FA framework, AEVB framework, PCCA, and GPs. These components will be the key pieces used to build our two-step model pipeline that we will be inputting our data into: variational Gaussian Process Factor Analysis model (vGPFA) and probabilistic Canonical Correlation Analysis (pCCA) model. By using these core principles, our latent variable model will be able to extend the principles of factor analysis to extract latent representations within neural data to provide more interpretable firing rate dynamics than other current methods. 
 
