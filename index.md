@@ -1,5 +1,5 @@
 <br>
-<p align="center">SMohamed Elshazly: melshazly@ucsd.edu</p>
+<p align="center">Mohamed Elshazly: melshazly@ucsd.edu</p>
 <p align="center">Nathen Lee: nal008@ucsd.edu</p>
 <p align="center">Charlie Gillet: cgillet@ucsd.edu</p>
 <p align="center">Mentor: Mikio Aoi maoi@ucsd.edu</p>
