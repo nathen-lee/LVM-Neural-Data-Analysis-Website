@@ -21,7 +21,12 @@ The model we wish to construct builds on four main core components that serve as
 
 Using data collected by the International Brain Laboratory, we aim to analyze the latent behaviors of multiple regions of the brain in mice during standardized experiments. In these experiments, mice, with up to two probes recording 384 channels inserted into their brains, undergo a decision-making task where they are shown a stimulus of several different contrast strengths and is to move a wheel to center the stimulus on a screen. The IBL database contains large amounts of neural data (about 621,733 neurons) collected from 699 insertions of Neuropixel probes using 139 different mice over many experiment trials. These experiments give insight into regions and times in the brain that show sensitivity to stimulus, movement, reward, vision, and decision making.
 
-<iframe src="assets/mouse_experiment.html" width=800 height=600 frameBorder=0></iframe>
+<figure>
+<div style="text-align: center;">
+        <img src="./assets/mouse_experiment.png" style="width: 300px; height: 255px;" alt="Alt text">
+        <figcaption>Fig.1 - Mice Brain Data From IBL</figcaption>
+</div>
+</figure>
 
 ### Variational Latent Gaussian Process (vLGP) Model
 
