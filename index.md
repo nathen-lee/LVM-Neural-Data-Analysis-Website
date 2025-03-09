@@ -22,17 +22,6 @@
         width: 100%; 
         height: auto; 
         }
-        #results iframe {
-        width: 100%;
-        height: 500px;
-        border: none; 
-        }
-        #results div {
-        position: relative; 
-        width: 100%;
-        height: 500px; 
-        overflow: hidden;
-        }
 </style>
 </head>
 <body>
@@ -119,19 +108,21 @@
   </article>
 </section>
 
-<section id="results" style="width: 100%;">
+<section id="results">
   <h2>Results</h2>
-  <p>Superior Colliculus Intermediate White Layer (SCIW): Contains fiber tracts that connect various layers within the superior colliculus and link it with other brain regions. While not directly processing sensory inputs, it facilitates the transmission of motor commands that underlie orienting responses and visually guided actions.</p>
-  
-  <div style="height: 500px; position: relative;">
-    <iframe src="assets/sciw_movement_plot.html" style="width: 100%; height: 100%;" frameborder="0"></iframe>
-  </div>
+  <strong>Superior Colliculus Intermediate White Layer (SCIW)</strong>: Contains fiber tracts that connect various layers within the superior colliculus and link it with other brain regions. While not directly processing sensory inputs, it facilitates the transmission of motor commands that underlie orienting responses and visually guided actions.
 
-  <p>Superior Colliculus Deep Grey Layer (SCDG): Involved in triggering complex motor responses, particularly those related to defensive or escape behaviors. Contributes to the coordination of multisensory inputs into appropriate motor outputs, such as rapid turning or withdrawal movements in response to threats.</p>
+  <figure> 
+  <iframe src="assets/sciw_movement_plot.html" style="width: 1100; height: 1000;" frameBorder=0></iframe>
+  <figcaption>Fig.9 - SCIW</figcaption>
+  </figure>
 
-  <div style="height: 500px; position: relative;">
-    <iframe src="assets/scdg_stimulus_plot.html" style="width: 100%; height: 100%;" frameborder="0"></iframe>
-  </div>
+  <strong>Superior Colliculus Deep Grey Layer (SCDG)</strong>: Involved in triggering complex motor responses, particularly those related to defensive or escape behaviors. Contributes to the coordination of multisensory inputs into appropriate motor outputs, such as rapid turning or withdrawal movements in response to threats
+
+  <figure>
+  <iframe src="assets/scdg_stimulus_plot.html" style="width: 1100; height: 1000;" frameBorder=0></iframe>
+  <figcaption>Fig.10 - SCDG</figcaption>
+  </figure>
 </section>
 
 <section id="conclusions">
@@ -141,7 +132,7 @@
   <p>R-squared is the coefficient of determination and measures the proportion of variance explained by the latent variables in the PCCA model, or simply put, signifies how well the data fits the model. The graph displays a rapid increase, stabilizing after 3 latent variables, indicating a strong fit of the model to the data when more latent variables are utilized, especially beyond 3 variables.</p>
 
   <img src="./assets/conc.png" alt="Project Conclusions Visual Summary">
-  <figcaption>Fig.4 - Root Mean Squared Error (RMSE) and R-squared</figcaption>
+  <figcaption>Fig.11 - Root Mean Squared Error (RMSE) and R-squared</figcaption>
 </section>
 
 </body>
