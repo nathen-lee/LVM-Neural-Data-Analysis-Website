@@ -30,8 +30,7 @@
         #results div {
         position: relative;
         width: 100%; 
-        height: 700px;
-        overflow: hidden; 
+        height: 700px; 
         }
 
 </style>
