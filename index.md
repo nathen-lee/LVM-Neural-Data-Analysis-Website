@@ -24,13 +24,13 @@
         }
         #results iframe {
         width: 100%; 
-        height: 700px;
+        height: 650px;
         border: none; 
         }
         #results div {
         position: relative;
         width: 100%; 
-        height: 700px; 
+        height: 650px; 
         }
 
 </style>
