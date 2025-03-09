@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -25,6 +26,7 @@
 </head>
 <body>
 <header>
+  <h2>Contents</h2>
   <nav>
     <ul>
       <li><a href="#introduction">Introduction</a></li>
@@ -74,13 +76,13 @@
     </div>
     <p>We will be using spike train data that have been presorted into the groups that present themselves as the sources of the voltage changes. These clusters are sometimes hard to identify as a single neuron, a cluster of neurons, or perhaps a mixture of noise from neighboring sources, so labels have been assigned (1 being a good cluster, 0 being bad/unclear) to each cluster recorded in a session. The spike trains from good clusters will be the main focus of our work in finding representative latent variables.</p>
     <div class="image-container">
-        <img src="./assets/data_acquisition.png" alt="IBL Mouse Experiment Setup" style="width: 60%; height: auto">
+        <img src="./assets/data_acquisition.png" alt="IBL Mouse Experiment Setup">
         <figcaption>Fig.3 - the sequence from capturing raw neural signals, performing high-pass filtering to refine the data, utilizing a clustering algorithm to analyze the signals, and finally sorting the spikes.</figcaption>
     </div>
     <p>We seek to test firstMove, stimOn (and its contrast strength), and feedbackType. These represent the first movement of the mouse in each trial, the moment the stimulus appears on the screen, the strength of the contrast of the stimulus, and the reward/punishment the mouse receives after they make a decision, respectively. </p>
     <div class="image-container">
         <figure>
-                <img src="./assets/psth.png" alt="IBL Mouse Experiment Setup" style="width: 70%; height: auto">
+                <img src="./assets/psth.png" alt="IBL Mouse Experiment Setup">
                 <figcaption>Fig.5 - Peristimulus time histogram (PSTH) showing correct/incorrect and left/right firing rate averages over an entire session for a single cluster.</figcaption>
         </figure>
         <figure>
@@ -110,24 +112,22 @@
   <h2>Results</h2>
   Superior Colliculus Intermediate White Layer (SCIW): Contains fiber tracts that connect various layers within the superior colliculus and link it with other brain regions. While not directly processing sensory inputs, it facilitates the transmission of motor commands that underlie orienting responses and visually guided actions.
 
-  <iframe src="assets/sciw_movement_plot.html" frameBorder=0></iframe>
+  <iframe src="assets/sciw_movement_plot.html" style="width: 100%; height: 100%;" frameBorder=0></iframe>
 
   Superior Colliculus Deep Grey Layer (SCDG): Involved in triggering complex motor responses, particularly those related to defensive or escape behaviors. Contributes to the coordination of multisensory inputs into appropriate motor outputs, such as rapid turning or withdrawal movements in response to threats
 
-  <iframe src="assets/scdg_stimulus_plot.html" frameBorder=0></iframe>
+  <iframe src="assets/scdg_stimulus_plot.html" style="width: 100%; height: 100%;" frameBorder=0></iframe>
 </section>
 
 <section id="conclusions">
   <h2>Conclusions</h2>
-  <p>The project's findings demonstrate the effectiveness of our modeling approach in dissecting complex neural data, offering insights into brain function and its response to environmental stimuli.</p>
-  <img src="./assets/conc.png" alt="Project Conclusions Visual Summary" style="width: 300px; height: 255px;">
-  <figcaption>Fig.4 - Project Conclusions Visual Summary</figcaption>
-</section>
+  <p>Root Mean Square Error measures the average difference between predicted values and actual values. The graph displays an initial steep decline, reaching its lowest at variable 3 and then stabilizing, suggesting strong improvement from 1 to 3 latent variables but diminishing returns in RMSE improvement with more than 3 latent variables.</p>
 
-<footer>
-  <p>Contact information: [insert email]</p>
-  <p>Copyright © 2023 Project Team</p>
-</footer>
+  <p>R-squared is the coefficient of determination and measures the proportion of variance explained by the latent variables in the PCCA model, or simply put, signifies how well the data fits the model. The graph displays a rapid increase, stabilizing after 3 latent variables, indicating a strong fit of the model to the data when more latent variables are utilized, especially beyond 3 variables.</p>
+
+  <img src="./assets/conc.png" alt="Project Conclusions Visual Summary">
+  <figcaption>Fig.4 - Root Mean Squared Error (RMSE) and R-squared</figcaption>
+</section>
 
 </body>
 </html>
