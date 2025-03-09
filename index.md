@@ -126,7 +126,6 @@
   <div style="height: 1000px; position: relative;"> 
   <iframe src="assets/sciw_movement_plot.html" style="width: 200%; height: 200%;" frameborder="0"></iframe>
   </div>
-  <br>
   <strong>Superior Colliculus Deep Grey Layer (SCDG)</strong>: Involved in triggering complex motor responses, particularly those related to defensive or escape behaviors. Contributes to the coordination of multisensory inputs into appropriate motor outputs, such as rapid turning or withdrawal movements in response to threats
 
   <div style="height: 1000px; position: relative;"> 
