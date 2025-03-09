@@ -107,15 +107,15 @@
   <article id="vLGPModel">
     <h3>Variational Latent Gaussian Process (vLGP) Model</h3>
     <p>The first model our data will be put through is a variational Latent Gaussian Process (vLGP) model, which is primarily used in neuroscience to decode neural data into a more interpretable lower-dimensional latent space governed by Gaussian Processes. This model uses necessary imports from essential libraries such as NumPy, SciPy, Matplotlib, and the vLGP-specific library developed by Yuan Zhao and Il Memming Park to handle computations and visualizations.</p>
-    <img src="./assets/vgpfa.jpg" alt="variational Latent Gaussian Process" style="width: 300px; height: 255px;">
+    <img src="./assets/vgpfa.jpg" alt="variational Latent Gaussian Process">
     <figcaption>Fig.7 - Variational Latent Gaussian Process</figcaption>
   </article>
   
   <article id="pCCAModel">
     <h3>Probabilistic Canonical Correlation Analysis (pCCA) Model</h3>
-    <p>Follwing the vLGP processing is the probabilistic Canonical Correlation Analysis (pCCA) model. After the IBL data is collected and cleaned, it will be first put through the vLGP model to smoothen and move the data to a lower-dimensional latent space. Then, the vLGP model's output is used as the input to the pCCA model in order to conduct the analysis. In the field of neuroscience, pCCA is typically used to model latent variables that explain the variability between two or more modalities of data, which helps to understand complex neural dynamics.
+    <p>Following the vLGP processing is the probabilistic Canonical Correlation Analysis (pCCA) model. After the IBL data is collected and cleaned, it will be first put through the vLGP model to smoothen and move the data to a lower-dimensional latent space. Then, the vLGP model's output is used as the input to the pCCA model in order to conduct the analysis. In the field of neuroscience, pCCA is typically used to model latent variables that explain the variability between two or more modalities of data, which helps to understand complex neural dynamics.
 </p>
-    <img src="./assets/pccaxxz.png" alt="Probabilistic Canonical Correlation Analysis Visualization" style="width: 300px; height: 255px;">
+    <img src="./assets/pccaxxz.png" alt="Probabilistic Canonical Correlation Analysis Visualization">
     <figcaption>Fig.8 - Probabilistic Canonical Correlation Analysis Visualization</figcaption>
   </article>
 </section>
@@ -124,15 +124,15 @@
   <h2>Results</h2>
   <strong>Superior Colliculus Intermediate White Layer (SCIW)</strong>: Contains fiber tracts that connect various layers within the superior colliculus and link it with other brain regions. While not directly processing sensory inputs, it facilitates the transmission of motor commands that underlie orienting responses and visually guided actions.
 
-  <div style="height: 700px; position: relative;"> 
-  <iframe src="assets/sciw_movement_plot.html" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+  <div style="height: 1000px; position: relative;"> 
+  <iframe src="assets/sciw_movement_plot.html" style="width: 200%; height: 200%;" frameborder="0"></iframe>
   <figcaption>Fig.9 - SCIW</figcaption>
   </div>
 
   <strong>Superior Colliculus Deep Grey Layer (SCDG)</strong>: Involved in triggering complex motor responses, particularly those related to defensive or escape behaviors. Contributes to the coordination of multisensory inputs into appropriate motor outputs, such as rapid turning or withdrawal movements in response to threats
 
-  <div style="height: 700px; position: relative;"> 
-  <iframe src="assets/scdg_stimulus_plot.html" style="width: 100%; height: 100%;" frameBorder=0></iframe>
+  <div style="height: 1000px; position: relative;"> 
+  <iframe src="assets/scdg_stimulus_plot.html" style="width: 200%; height: 200%;" frameBorder=0></iframe>
   <figcaption>Fig.10 - SCDG</figcaption>
   </div>
 </section>
