@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -94,7 +93,7 @@
   <article id="vLGPModel">
     <h3>Variational Latent Gaussian Process (vLGP) Model</h3>
     <p>The first model our data will be put through is a variational Latent Gaussian Process (vLGP) model, which is primarily used in neuroscience to decode neural data into a more interpretable lower-dimensional latent space governed by Gaussian Processes. This model uses necessary imports from essential libraries such as NumPy, SciPy, Matplotlib, and the vLGP-specific library developed by Yuan Zhao and Il Memming Park to handle computations and visualizations.</p>
-    <img src="./assets/vLGP.jpg" alt="variational Latent Gaussian Process" style="width: 300px; height: 255px;">
+    <img src="./assets/vgpfa.jpg" alt="variational Latent Gaussian Process" style="width: 300px; height: 255px;">
     <figcaption>Fig.7 - Variational Latent Gaussian Process</figcaption>
   </article>
   
@@ -111,11 +110,11 @@
   <h2>Results</h2>
   Superior Colliculus Intermediate White Layer (SCIW): Contains fiber tracts that connect various layers within the superior colliculus and link it with other brain regions. While not directly processing sensory inputs, it facilitates the transmission of motor commands that underlie orienting responses and visually guided actions.
 
-  <iframe src="assets/sciw_movement_plot.html" width=800 height=600 frameBorder=0></iframe>
+  <iframe src="assets/sciw_movement_plot.html" frameBorder=0></iframe>
 
   Superior Colliculus Deep Grey Layer (SCDG): Involved in triggering complex motor responses, particularly those related to defensive or escape behaviors. Contributes to the coordination of multisensory inputs into appropriate motor outputs, such as rapid turning or withdrawal movements in response to threats
 
-  <iframe src="assets/scdg_stimulus_plot.html" width=800 height=600 frameBorder=0></iframe>
+  <iframe src="assets/scdg_stimulus_plot.html" frameBorder=0></iframe>
 </section>
 
 <section id="conclusions">
