@@ -22,6 +22,17 @@
         width: 100%; 
         height: auto; 
         }
+        #results iframe {
+        width: 100%;
+        height: 500px;
+        border: none; 
+        }
+        #results div {
+        position: relative; 
+        width: 100%;
+        height: 500px; 
+        overflow: hidden;
+        }
 </style>
 </head>
 <body>
@@ -108,15 +119,19 @@
   </article>
 </section>
 
-<section id="results">
+<section id="results" style="width: 100%;">
   <h2>Results</h2>
-  Superior Colliculus Intermediate White Layer (SCIW): Contains fiber tracts that connect various layers within the superior colliculus and link it with other brain regions. While not directly processing sensory inputs, it facilitates the transmission of motor commands that underlie orienting responses and visually guided actions.
+  <p>Superior Colliculus Intermediate White Layer (SCIW): Contains fiber tracts that connect various layers within the superior colliculus and link it with other brain regions. While not directly processing sensory inputs, it facilitates the transmission of motor commands that underlie orienting responses and visually guided actions.</p>
+  
+  <div style="height: 500px; position: relative;">
+    <iframe src="assets/sciw_movement_plot.html" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+  </div>
 
-  <iframe src="assets/sciw_movement_plot.html" style="width: 100%; height: 100%;" frameBorder=0></iframe>
+  <p>Superior Colliculus Deep Grey Layer (SCDG): Involved in triggering complex motor responses, particularly those related to defensive or escape behaviors. Contributes to the coordination of multisensory inputs into appropriate motor outputs, such as rapid turning or withdrawal movements in response to threats.</p>
 
-  Superior Colliculus Deep Grey Layer (SCDG): Involved in triggering complex motor responses, particularly those related to defensive or escape behaviors. Contributes to the coordination of multisensory inputs into appropriate motor outputs, such as rapid turning or withdrawal movements in response to threats
-
-  <iframe src="assets/scdg_stimulus_plot.html" style="width: 100%; height: 100%;" frameBorder=0></iframe>
+  <div style="height: 500px; position: relative;">
+    <iframe src="assets/scdg_stimulus_plot.html" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+  </div>
 </section>
 
 <section id="conclusions">
