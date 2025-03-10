@@ -101,26 +101,31 @@
                 <figcaption>Fig.6 - A bar graph showing correct/incorrect firing rate based on contrast strength averages over an entire session for a single cluster.</figcaption>
         </figure>
     </div>
+    <p> For each of these events, we performed a permutation test for each time interval and, using the False Discovery Rate to control our rate of Type I errors across trials, filtered for clusters with at least 5 statistically significant (alpha level = 0.005) time bins. Additionally, we tested each clusters correct/incorrect and left/right sensitivity by contrast strength levels. Through this exploration, we were able to select two of the most sensitive brain regions to pass through our model pipeline.</p>
   </article>    
   
   <article id="vLGPModel">
     <h3>Variational Latent Gaussian Process (vLGP) Model</h3>
-    <p>The first model our data will be put through is a variational Latent Gaussian Process (vLGP) model, which is primarily used in neuroscience to decode neural data into a more interpretable lower-dimensional latent space governed by Gaussian Processes. This model uses necessary imports from essential libraries such as NumPy, SciPy, Matplotlib, and the vLGP-specific library developed by Yuan Zhao and Il Memming Park to handle computations and visualizations.</p>
+    <p>The first model our data will be put through is a variational Latent Gaussian Process (vLGP) model, which is primarily used in neuroscience to decode neural data into a more interpretable lower-dimensional latent space governed by Gaussian Processes. The first model our data will be put through is a variational Latent Gaussian Process(vLGP) model, which is primarily used in neuroscience to decode neural data into a more interpretable lower-dimensional latent space governed by Gaussian Processes. vLGP assumes that the activity of a neuron at a particularly chosen time is drawn from the poisson distribution which in return causes the prior and posterior to be non-conjugate. Because of this, we would need to predict the posterior value of the latent process. To do so, we leverage variational inference to minimize the difference between the predicted posterior and the real posterior. Through variational inference, we maximize the ELBo which in turn minimizes the difference between the predicted and real posterior. </p>
+    <p>This model uses necessary imports from essential libraries such as NumPy, SciPy, Matplotlib, and the vLGP-specific library developed by Yuan Zhao and Il Memming Park to handle computations and visualizations.</p>
+    <p><a href="https://drive.google.com/file/d/1wmj2dqI0WqJormsnmI2Z7EEZR3yiyErQ/view?usp=drivesdk">Zhao and Park vLGP Model</a></p>
     <img src="./assets/vgpfa.jpg" alt="variational Latent Gaussian Process">
     <figcaption>Fig.7 - Variational Latent Gaussian Process</figcaption>
   </article>
   
   <article id="pCCAModel">
     <h3>Probabilistic Canonical Correlation Analysis (pCCA) Model</h3>
-    <p>Following the vLGP processing is the probabilistic Canonical Correlation Analysis (pCCA) model. After the IBL data is collected and cleaned, it will be first put through the vLGP model to smoothen and move the data to a lower-dimensional latent space. Then, the vLGP model's output is used as the input to the pCCA model in order to conduct the analysis. In the field of neuroscience, pCCA is typically used to model latent variables that explain the variability between two or more modalities of data, which helps to understand complex neural dynamics.
-</p>
+    <p>The next and final step of our pipeline involves a probabilistic Canonical Correlation Analysis (pCCA) model. The primary goal of pCCA is to find pairs of linear transformations that reveal correlation in the latent space between two separate sets of data. This assumes the two datasets have a shared latent space as well as their own individual latent spaces. In the field of neuroscience, pCCA is typically used to model latent variables that explain the variability between two or more modalities of data, which helps to understand complex neural dynamics.</p>
     <img src="./assets/pccaxxz.png" alt="Probabilistic Canonical Correlation Analysis Visualization">
     <figcaption>Fig.8 - Probabilistic Canonical Correlation Analysis Visualization</figcaption>
+    <p>After the IBL data is collected and cleaned, it is first put through the vLGP model to smoothen and move the data to a lower-dimensional latent space. Then, the vLGP model's output is used as the input to the pCCA model in order to conduct the analysis. With the pCCA step complete, this model can identify latent neural representations, explaining behaviors and neural dynamics across different regions of the brain.</p>
   </article>
 </section>
 
 <section id="results">
   <h2>Results</h2>
+  <p>Our results from fitting the vLGP model with good clusters from the most dense region, (SCdg, where the highest quantity of clusters sensitive to the stimulus appearing were found), resulted in similar patterns for both left and right-positioned stimulus trials but slightly different positions. We can see that the pattern is similar across the first movement event in our second region SCiw. The shape is different in each region, but in both cases there is some uniqueness to the left and right trials where they encompass different ranges in the latent space. This could be a result of the fact that this is subsections of a larger brain region, poor spike variability, or perhaps the region lacks the capacity to differentiate left versus right as effectively as others.</p>
+  
   <strong>Superior Colliculus Intermediate White Layer (SCIW)</strong>: Contains fiber tracts that connect various layers within the superior colliculus and link it with other brain regions. While not directly processing sensory inputs, it facilitates the transmission of motor commands that underlie orienting responses and visually guided actions.
 
   <div style="height: 1000px; position: relative;"> 
@@ -135,12 +140,14 @@
 
 <section id="conclusions">
   <h2>Conclusions</h2>
-  <p>Root Mean Square Error measures the average difference between predicted values and actual values. The graph displays an initial steep decline, reaching its lowest at variable 3 and then stabilizing, suggesting strong improvement from 1 to 3 latent variables but diminishing returns in RMSE improvement with more than 3 latent variables.</p>
-
-  <p>R-squared is the coefficient of determination and measures the proportion of variance explained by the latent variables in the PCCA model, or simply put, signifies how well the data fits the model. The graph displays a rapid increase, stabilizing after 3 latent variables, indicating a strong fit of the model to the data when more latent variables are utilized, especially beyond 3 variables.</p>
+  <p>To assess the performance of our model, we decided to compute the Root Mean Squared Error (RMSE) and the R-squared coefficient. RMSE measures the average difference between predicted values and actual values. On the other hand, R-squared measures the proportion of variance explained by the latent variables in the PCCA model, or simply put, signifies how well the data fits the model.</p>
 
   <img src="./assets/conc.png" alt="Project Conclusions Visual Summary">
   <figcaption>Fig.11 - Root Mean Squared Error (RMSE) and R-squared</figcaption>
+
+  <p>Our findings showcase strong, rapid improvements in performance when utilizing 1 to 3 latent variables, but diminishing returns in improvement when using more than 3 latent variables. This suggests stronger fitting to the model as more latent variables are employed with the biggest jump in performance when using 3 latent variables. </p>
+    
+  <p>Our model offers potential for advancing our means of analysis on neural data by providing better representations that keep pace with the constantly evolving data collection methods.</p>
 </section>
 
 </body>
