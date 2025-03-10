@@ -76,7 +76,6 @@
   <p>As methods for recording neural data advance rapidly in both volume and speed, neurophysiologists face increasing challenges in developing innovative techniques to assess and sort incoming spike signals (neuron firing rates) and inferring relationships between neural activities across different brain regions. We seek to create and utilize a method for extracting shared and independent latent features that accurately represent interpretable neural population dynamics across distinct brain regions.</p>
 
   <p>The model we wish to construct builds on four main core components that serve as the foundation, allowing it to operate as we desire it to. These four components are: the Factor Analysis (FA) framework, the Auto-Encoding Variational Bayes (AEVB) framework, Probabilistic Canonical Correlation Analysis (pCCA), and Gaussian Processes (GPs). These components will be the key pieces used to build our two-step model pipeline that we will be inputting our data into: variational Latent Gaussian Process model (vLGP) and pCCA model. By using these core principles, our latent variable model will be able to extend the principles of factor analysis to extract latent representations within neural data to provide more interpretable firing rate dynamics than other current methods.</p>
-  </body>
 </section>
 
 <section id="modelHierarchy">
@@ -152,11 +151,13 @@
   <div style="height: 1000px; position: relative;"> 
   <iframe src="assets/sciw_movement_plot.html" style="width: 200%; height: 200%;" frameborder="0"></iframe>
   </div>
+  <br>
   <strong>Superior Colliculus Deep Grey Layer (SCDG)</strong>: Involved in triggering complex motor responses, particularly those related to defensive or escape behaviors. Contributes to the coordination of multisensory inputs into appropriate motor outputs, such as rapid turning or withdrawal movements in response to threats
 
   <div style="height: 1000px; position: relative;"> 
   <iframe src="assets/scdg_stimulus_plot.html" style="width: 200%; height: 200%;" frameBorder=0></iframe>
   </div>
+  <br>
 </section>
 
 <section id="conclusions">
