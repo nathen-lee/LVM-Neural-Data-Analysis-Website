@@ -31,7 +31,16 @@
         width: 100%; 
         height: 700px; 
         }
-
+        .modelflow {
+        font-size: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        }
+        .arrow {
+        margin: 0 20px;
+        }
 </style>
 </head>
 <body>
@@ -67,10 +76,14 @@
   <p>As methods for recording neural data advance rapidly in both volume and speed, neurophysiologists face increasing challenges in developing innovative techniques to assess and sort incoming spike signals (neuron firing rates) and inferring relationships between neural activities across different brain regions. We seek to create and utilize a method for extracting shared and independent latent features that accurately represent interpretable neural population dynamics across distinct brain regions.</p>
 
   <p>The model we wish to construct builds on four main core components that serve as the foundation, allowing it to operate as we desire it to. These four components are: the Factor Analysis (FA) framework, the Auto-Encoding Variational Bayes (AEVB) framework, Probabilistic Canonical Correlation Analysis (pCCA), and Gaussian Processes (GPs). These components will be the key pieces used to build our two-step model pipeline that we will be inputting our data into: variational Latent Gaussian Process model (vLGP) and pCCA model. By using these core principles, our latent variable model will be able to extend the principles of factor analysis to extract latent representations within neural data to provide more interpretable firing rate dynamics than other current methods.</p>
+  </body>
 </section>
 
 <section id="modelHierarchy">
   <h2>Model Hierarchy Pipeline</h2>
+  <div class="modelflow">
+     <span>IBL Data</span><span class="arrow">&#10142;</span><span>vLGP</span><span class="arrow">&#10142;</span><span>pCCA</span>
+  </div>
   <article id="IBLData">
     <h3>IBL Data</h3>
     <p>Using data collected by the International Brain Laboratory, we aim to analyze the latent behaviors of multiple regions of the brain in mice during standardized experiments. In these experiments, mice, with up to two probes recording 384 channels inserted into their brains, undergo a decision-making task where they are shown a stimulus of several different contrast strengths and is to move a wheel to center the stimulus on a screen. The IBL database contains large amounts of neural data (about 621,733 neurons) collected from 699 insertions of Neuropixel probes using 139 different mice over many experiment trials. These experiments give insight into regions and times in the brain that show sensitivity to stimulus, movement, reward, vision, and decision making.</p>
@@ -102,7 +115,11 @@
     </div>
     <p> For each of these events, we performed a permutation test for each time interval and, using the False Discovery Rate to control our rate of Type I errors across trials, filtered for clusters with at least 5 statistically significant (alpha level = 0.005) time bins. Additionally, we tested each clusters correct/incorrect and left/right sensitivity by contrast strength levels. Through this exploration, we were able to select two of the most sensitive brain regions to pass through our model pipeline.</p>
   </article>    
-  
+
+  <div style="text-align: center;">
+    <span style="font-size: 100px;">&#8595;</span>
+  </div>
+
   <article id="vLGPModel">
     <h3>Variational Latent Gaussian Process (vLGP) Model</h3>
     <p>The first model our data will be put through is a variational Latent Gaussian Process (vLGP) model, which is primarily used in neuroscience to decode neural data into a more interpretable lower-dimensional latent space governed by Gaussian Processes. The first model our data will be put through is a variational Latent Gaussian Process(vLGP) model, which is primarily used in neuroscience to decode neural data into a more interpretable lower-dimensional latent space governed by Gaussian Processes. vLGP assumes that the activity of a neuron at a particularly chosen time is drawn from the poisson distribution which in return causes the prior and posterior to be non-conjugate. Because of this, we would need to predict the posterior value of the latent process. To do so, we leverage variational inference to minimize the difference between the predicted posterior and the real posterior. Through variational inference, we maximize the ELBo which in turn minimizes the difference between the predicted and real posterior. </p>
@@ -112,6 +129,10 @@
     <figcaption>Fig.7 - Variational Latent Gaussian Process</figcaption>
   </article>
   
+  <div style="text-align: center;">
+    <span style="font-size: 100px;">&#8595;</span>
+  </div>
+
   <article id="pCCAModel">
     <h3>Probabilistic Canonical Correlation Analysis (pCCA) Model</h3>
     <p>The next and final step of our pipeline involves a probabilistic Canonical Correlation Analysis (pCCA) model. The primary goal of pCCA is to find pairs of linear transformations that reveal correlation in the latent space between two separate sets of data. This assumes the two datasets have a shared latent space as well as their own individual latent spaces. In the field of neuroscience, pCCA is typically used to model latent variables that explain the variability between two or more modalities of data, which helps to understand complex neural dynamics.</p>
@@ -121,6 +142,7 @@
   </article>
 </section>
 
+<br>
 <section id="results">
   <h2>Results</h2>
   <p>Our results from fitting the vLGP model with good clusters from the most dense region, (SCdg, where the highest quantity of clusters sensitive to the stimulus appearing were found), resulted in similar patterns for both left and right-positioned stimulus trials but slightly different positions. We can see that the pattern is similar across the first movement event in our second region SCiw. The shape is different in each region, but in both cases there is some uniqueness to the left and right trials where they encompass different ranges in the latent space. This could be a result of the fact that this is subsections of a larger brain region, poor spike variability, or perhaps the region lacks the capacity to differentiate left versus right as effectively as others.</p>
