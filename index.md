@@ -91,6 +91,7 @@
   <article id="IBLData">
     <h3>IBL Data</h3>
     <p>Using data collected by the International Brain Laboratory, we aim to analyze the latent behaviors of multiple regions of the brain in mice during standardized experiments. In these experiments, mice, with up to two probes recording 384 channels inserted into their brains, undergo a decision-making task where they are shown a stimulus of several different contrast strengths and is to move a wheel to center the stimulus on a screen. The IBL database contains large amounts of neural data (about 621,733 neurons) collected from 699 insertions of Neuropixel probes using 139 different mice over many experiment trials. These experiments give insight into regions and times in the brain that show sensitivity to stimulus, movement, reward, vision, and decision making.</p>
+    <p><a href="https://www.internationalbrainlab.com/#home-new">IBL Website</a></p>
     <div class="image-container">
         <figure>
                 <img src="./assets/mouse_experiment.png" alt="IBL Mouse Experiment Setup">
@@ -157,6 +158,7 @@
   <div style="height: 1000px; position: relative;"> 
   <iframe src="assets/sciw_movement_plot.html" style="width: 200%; height: 200%;" frameborder="0"></iframe>
   </div>
+  <br>
   <figcaption>Fig.8 - SCIW latent variables plot</figcaption>
   <br>
   <strong>Superior Colliculus Deep Grey Layer (SCDG)</strong>: Involved in triggering complex motor responses, particularly those related to defensive or escape behaviors. Contributes to the coordination of multisensory inputs into appropriate motor outputs, such as rapid turning or withdrawal movements in response to threats
@@ -164,6 +166,7 @@
   <div style="height: 1000px; position: relative;"> 
   <iframe src="assets/scdg_stimulus_plot.html" style="width: 200%; height: 200%;" frameBorder=0></iframe>
   </div>
+  <br>
   <figcaption>Fig.9 - SCDG latent variables plot</figcaption>
   <br>
 </section>
